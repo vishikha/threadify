@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 160" width="480" height="160">
+  <defs>
+    <linearGradient id="threadGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#FF4D6D"/>
+      <stop offset="50%" style="stop-color:#FF9500"/>
+      <stop offset="100%" style="stop-color:#00C2FF"/>
+    </linearGradient>
+    <linearGradient id="dotGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF4D6D"/>
+      <stop offset="100%" style="stop-color:#FF9500"/>
+    </linearGradient>
+    <linearGradient id="dotGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00C2FF"/>
+      <stop offset="100%" style="stop-color:#7B61FF"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Icon: needle with thread -->
+  <g transform="translate(28, 30)">
+    <!-- Needle body -->
+    <rect x="44" y="0" width="6" height="72" rx="3" fill="#1a1a1a"/>
+    <!-- Needle tip -->
+    <polygon points="44,72 50,72 47,86" fill="#1a1a1a"/>
+    <!-- Needle eye hole -->
+    <ellipse cx="47" cy="10" rx="3.5" ry="5" fill="white"/>
+
+    <!-- Thread going through needle and curving -->
+    <path d="M47 10 C20 20, 10 50, 30 65 C50 80, 80 60, 70 90 C60 110, 20 100, 10 95"
+          stroke="url(#threadGrad)" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+
+    <!-- Thread spool bottom -->
+    <rect x="0" y="88" width="28" height="14" rx="3" fill="#1a1a1a"/>
+    <rect x="4" y="83" width="20" height="24" rx="2" fill="#2a2a2a"/>
+    <rect x="0" y="98" width="28" height="6" rx="3" fill="#1a1a1a"/>
+    <!-- Spool thread color -->
+    <rect x="5" y="86" width="18" height="15" rx="1" fill="url(#threadGrad)" opacity="0.85"/>
+  </g>
+
+  <!-- Wordmark: THREDIFY -->
+  <text
+    x="118"
+    y="107"
+    font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+    font-weight="800"
+    font-size="62"
+    letter-spacing="-2"
+    fill="#1a1a1a"
+  >THREDIFY</text>
+
+  <!-- Colorful underline accent -->
+  <rect x="118" y="116" width="340" height="5" rx="2.5" fill="url(#threadGrad)"/>
+
+  <!-- Small decorative dots -->
+  <circle cx="118" cy="116" r="5" fill="url(#dotGrad)"/>
+  <circle cx="458" cy="116" r="5" fill="url(#dotGrad2)"/>
+</svg>

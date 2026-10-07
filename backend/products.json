@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Men's T-Shirt",
+    "category": "men",
+    "price": 499,
+    "image": "https://images.unsplash.com/photo-1600180758895-9b3cf0ab02cf"
+  },
+  {
+    "name": "Women's Dress",
+    "category": "women",
+    "price": 999,
+    "image": "https://images.unsplash.com/photo-1589820296153-0fc3b3c9b3ef"
+  },
+  {
+    "name": "Kids Shoes",
+    "category": "kids",
+    "price": 599,
+    "image": "https://images.unsplash.com/photo-1600180758895-9b3cf0ab02cf"
+  }
+]

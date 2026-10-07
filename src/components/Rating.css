@@ -1,0 +1,20 @@
+/* src/components/Rating.css */
+.rating {
+  display: flex;
+  gap: 4px;
+  font-size: 20px;
+}
+
+.star {
+  color: #ddd; /* inactive star */
+  cursor: default;
+  transition: color 0.2s;
+}
+
+.star.filled {
+  color: #ffd700; /* gold for filled */
+}
+
+.star.editable {
+  cursor: pointer;
+}

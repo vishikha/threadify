@@ -1,0 +1,166 @@
+/* ===== FRONT PAGE ===== */
+.frontpage {
+  font-family: 'Poppins', Arial, sans-serif;
+  background: #f9f9f9;
+}
+
+/* ===== HERO SLIDER ===== */
+.hero-slider {
+  width: 100%;
+  height: 90vh;
+}
+
+/* ===== SLIDE ===== */
+.slide {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+
+  background-size: 100%; /* full width */
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  transition: transform 0.5s ease-in-out; /* smooth zoom animation */
+}
+
+/* ===== BACKGROUND IMAGES ===== */
+.slide1 {
+  background-image: url("src/slide1.jpg");
+}
+
+.slide2 {
+  background-image: url("src/slide2.jpg");
+}
+
+.slide3 {
+  background-image: url("src/slide3.jpg");
+}
+
+/* ===== GRADIENT OVERLAY ===== */
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0,0,0,0.6) 20%, rgba(0,0,0,0.2) 80%);
+  z-index: 1;
+}
+
+/* ===== TEXT CONTENT ===== */
+.slide-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  margin-left: 8%;
+  max-width: 550px;
+  animation: slideUp 1s ease-out;
+}
+
+.slide-content h1 {
+  font-size: 60px;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.slide-content p {
+  font-size: 22px;
+  margin-bottom: 30px;
+}
+
+/* ===== BUTTON ===== */
+.btn {
+  padding: 16px 35px;
+  background: #c9002b;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+  background: #a20023;
+  transform: scale(1.05);
+}
+
+/* ===== TEXT ANIMATION ===== */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== SWIPER STYLE ===== */
+.swiper-button-next,
+.swiper-button-prev {
+  color: white;
+}
+
+.swiper-pagination-bullet {
+  background: white;
+  opacity: 0.7;
+}
+
+.swiper-pagination-bullet-active {
+  background: #c9002b;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .slide-content h1 {
+    font-size: 50px;
+  }
+  .slide-content p {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .slide-content {
+    margin-left: 0;
+    text-align: center;
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .slide-content h1 {
+    font-size: 36px;
+  }
+
+  .slide-content p {
+    font-size: 16px;
+  }
+
+  .hero-slider,
+  .slide {
+    height: 70vh;
+    background-size: cover; /* slightly zoomed for small screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .slide-content h1 {
+    font-size: 26px;
+  }
+
+  .slide-content p {
+    font-size: 14px;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .hero-slider,
+  .slide {
+    height: 60vh;
+    background-size: cover;
+  }
+}

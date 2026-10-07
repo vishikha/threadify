@@ -1,0 +1,162 @@
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px; /* compact height */
+  background: #fff;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+  position: relative;
+  z-index: 1000;
+  border-bottom: 1px solid #eee;
+}
+
+/* Logo */
+.navbar-left .navbar-logo {
+  max-height: 100px; /* normal logo height */
+  width: auto;
+  display: block;
+}
+
+/* Center: Navigation + Search */
+.navbar-center {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* space between menu links and search */
+}
+
+/* Navigation */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 50px; /* spacing between links */
+}
+
+.nav-item {
+  position: relative;
+}
+
+/* Nav links with box hover */
+.nav-link {
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 25px;
+  color: #333;
+  text-decoration: none;
+  line-height: 1;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #fff;
+  background-color: #c9002b;
+}
+
+/* Search Box */
+.search-box {
+  position: relative;
+}
+
+.search-box input {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 18px;
+  width: 250px; /* adjust as needed */
+}
+
+.search-dropdown {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  width: 300px;
+  max-height: 350px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ccc;
+  z-index: 100;
+}
+
+.search-item {
+  display: flex;
+  gap: 10px;
+  padding: 5px;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+}
+
+.search-item:hover {
+  background-color: #f1f1f1;
+}
+
+/* Navbar right */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Cart & Wishlist Icons */
+.cart-btn svg,
+.wishlist-btn svg {
+  width: 30px;
+  height: 30px;
+}
+
+/* Auth Buttons */
+.login-btn, .register-btn {
+  padding: 4px 10px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.login-btn {
+  background: #555;
+  color: #fff;
+}
+
+.login-btn:hover {
+  background: #333;
+}
+
+.register-btn {
+  background: #c9002b;
+  color: #fff;
+}
+
+.register-btn:hover {
+  background: #a20023;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+  .navbar-right {
+    gap: 6px;
+  }
+  .login-btn, .register-btn {
+    padding: 3px 8px;
+    font-size: 12px;
+  }
+  .cart-btn svg,
+  .wishlist-btn svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .search-box input {
+    width: 150px;
+    font-size: 14px;
+  }
+}

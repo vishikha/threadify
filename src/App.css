@@ -1,0 +1,239 @@
+/* ====== Reset & Base ====== */
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #f8f8f8;
+  color: #222;
+}
+
+/* ====== Variables (easy theming) ====== */
+:root {
+  --primary: #e61e3c;
+  --primary-hover: #cc001f;
+  --text-dark: #222;
+  --text-light: #777;
+  --bg-light: #ffffff;
+  --border: #e5e5e5;
+}
+
+/* ====== App container ====== */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #f8f8f8;
+}
+
+/* ====== Main content ====== */
+.main-content {
+  flex: 1;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ====== Wrapper ====== */
+.content-wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+  width: 100%;
+  flex: 1;
+}
+
+/* ====== Navbar ====== */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: white;
+  border-bottom: 1px solid var(--border);
+}
+
+/* ====== Product Grid ====== */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px;
+  margin-top: 24px;
+}
+
+/* ====== Product Card ====== */
+.product-card {
+  background: var(--bg-light);
+  border-radius: 12px;
+  padding: 14px;
+  text-align: center;
+  transition: all 0.25s ease;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+/* Hover = premium feel */
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  border-color: var(--border);
+}
+
+/* ====== Product Images ====== */
+.product-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* Optional product text */
+.product-card h4 {
+  font-size: 15px;
+  margin: 8px 0 4px;
+}
+
+.product-card p {
+  font-size: 14px;
+  color: var(--text-light);
+  margin: 0;
+}
+
+/* ====== Buttons (IMPORTANT UX) ====== */
+button {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  background: var(--primary-hover);
+  transform: scale(1.03);
+}
+
+/* ====== Footer ====== */
+.footer {
+  background: #111;
+  color: #fff;
+  padding: 30px 20px 15px;
+  width: 100%;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.footer-section h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: #bbb;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.footer-section ul li a:hover {
+  color: white;
+}
+
+/* ====== Newsletter ====== */
+.newsletter-form {
+  display: flex;
+  margin-top: 10px;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.newsletter-form input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+}
+
+.newsletter-form button {
+  padding: 10px 16px;
+}
+
+/* ====== Social Icons ====== */
+.social-icons {
+  margin-top: 15px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.social-icons a span {
+  font-size: 20px;
+  transition: transform 0.2s;
+}
+
+.social-icons a span:hover {
+  transform: scale(1.2);
+}
+
+/* ====== Footer Bottom ====== */
+.footer-bottom {
+  border-top: 1px solid #333;
+  margin-top: 20px;
+  padding-top: 10px;
+  text-align: center;
+  font-size: 14px;
+  color: #aaa;
+}
+
+/* ====== Responsive ====== */
+@media (max-width: 768px) {
+  .main-content {
+    padding: 16px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .newsletter-form button {
+    width: 100%;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}

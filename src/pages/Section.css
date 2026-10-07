@@ -1,0 +1,135 @@
+.section-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 5px;
+  color: #1a1a1a;
+}
+
+.hero p {
+  color: #555;
+  font-size: 1rem;
+}
+
+.category-menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.category-btn {
+  padding: 10px 20px;
+  border: none;
+  background: #c9002b;
+  color: #fff;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.category-btn:hover,
+.category-btn.active {
+  background: #ff385c;
+  transform: scale(1.05);
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+}
+
+.product-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: center;
+  padding: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.product-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.product-card img:hover {
+  transform: scale(1.05);
+}
+
+.product-card h4 {
+  margin-top: 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.product-card p {
+  margin: 5px 0;
+  color: #555;
+  font-weight: 500;
+}
+
+.view-btn {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 7px 15px;
+  background: #c9002b;
+  color: #fff;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.view-btn:hover {
+  background: #ff385c;
+  transform: scale(1.05);
+}
+
+.badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #ff385c;
+  color: #fff;
+  font-size: 0.75rem;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+.image-wrapper {
+  position: relative;
+}
+
+.no-products {
+  text-align: center;
+  color: #777;
+  grid-column: 1/-1;
+  font-size: 1rem;
+}
+

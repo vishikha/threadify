@@ -1,0 +1,27 @@
+/* Changed from .product-page to .profile-page to match your JSX */
+.profile-page {
+  padding: 60px 40px; /* Increased top padding so it stays away from the header */
+  min-height: 50vh;  /* Ensures content fills the space between Header and Footer */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Added specific styling for the user info */
+.profile-page h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  text-transform: capitalize; /* Makes "diya" look like "Diya" */
+  color: #1a1a1a;
+}
+
+.profile-page p {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+/* If you add an image container later, use these: */
+.profile-detail {
+  display: flex;
+  gap: 40px;
+  margin-top: 20px;
+}

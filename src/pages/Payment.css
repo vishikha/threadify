@@ -1,0 +1,116 @@
+/* Base styles for the payment page */
+body {
+    /* Background Image with a dark overlay for better contrast */
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url('https://images.unsplash.com');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 20px;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    min-height: 100vh;
+}
+
+.payment-page-container {
+    max-width: 700px;
+    margin: 40px auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Slightly stronger shadow for visibility */
+}
+
+/* Headings with your brand color */
+h2 {
+    color: #b30021; 
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #f1f1f1;
+    padding-bottom: 10px;
+}
+
+/* Order Summary section */
+.order-summary {
+    background: #fff9fa;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    color: #444;
+}
+
+.total-row {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 2px dashed #ddd;
+}
+
+/* Input field styling */
+.delivery-details input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1.5px solid #e0e0e0;
+    border-radius: 6px;
+    box-sizing: border-box; 
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.delivery-details input:focus {
+    border-color: #b30021;
+    outline: none;
+    box-shadow: 0 0 5px rgba(179, 0, 33, 0.1);
+}
+
+/* Payment Method radio buttons */
+.payment-methods {
+    margin-bottom: 30px;
+}
+
+.method-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+/* Place Order Button */
+.place-order-btn {
+    width: 100%;
+    background-color: #b30021;
+    color: white;
+    padding: 16px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.place-order-btn:hover {
+    background-color: #8e001a;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 480px) {
+    .payment-page-container {
+        padding: 15px;
+        margin: 10px;
+    }
+}
